@@ -1,0 +1,23 @@
+html,body {
+    background-color: #22bbbb;
+    margin: 0 auto;
+    padding: 95px 16px 30px 5px;
+    width: 300px;
+    height: 100px;
+}
+
+.page {
+    border: 1px solid #665544;
+    background-color: #ffbbcc;
+    padding: 10px 30px 30px 30px;
+}
+
+h1 {
+    padding: 0px 10px 0px 10px;
+    font-size: 40px;
+    color: #bbb;
+}
+
+ul {
+    padding: 0px 10px 40px 10px;
+}

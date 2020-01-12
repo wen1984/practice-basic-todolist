@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>TodoList</title>
+</head>
+<body>
+    <div class="page">
+        <h1>TodoList</h1>
+        <form>
+            <input id="todo-input" type="text" name="todo">
+            <button id="submit-btn" type="button">Submit</button>
+        </form>
+        <ol id="result">
+
+        </ol>
+    </div>
+    <script type="text/javascript">
+        var submitBtn = document.getElementById('submit-btn');
+        var result = document.getElementById('result');
+        submitBtn.addEventListener('click', function(e) {
+        var todoInput = document.getElementById('todo-input').value;
+        if(todoInput !== '') {
+            var todo = document.createElement('LI');
+            todo.innerHTML = todoInput + ' <button>x</button>';
+            result.appendChild(todo);
+            document.getElementById('todo-input').value = '';
+        } else {
+            alert('Please enter the value!');
+        }
+    });
+
+        result.addEventListener('click', function(e) {
+        console.log(e.target.parentNode.parentNode);
+        e.target.parentNode.parentNode.removeChild(e.target.parentNode);
+    });
+    </script>
+</body>
+</html>
